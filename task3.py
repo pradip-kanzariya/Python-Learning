@@ -12,7 +12,7 @@ def odd_or_even(number: int) -> str:
     Returns
     -------
     str
-        Example: if number = 2 -> '2 is even number' else 'Wrong input: True'
+        Example: if number = 2 -> '2 is even number.' if number = 1 -> '1 is odd number.' else 'Wrong input: True'
     """
     if isinstance(number, int) and not isinstance(number, bool):        # check number is integer and also not boolean. 
         if number % 2 == 0:                                             # check remainder of number is 0 after  division by 2.
