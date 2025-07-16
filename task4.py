@@ -59,3 +59,32 @@ print(num_of_factorial(5))
 
 
 # Practice Task - 2 | Create a recursive function for the Fibonacci series.
+def fibonacci(number: int) -> list:
+    """
+    Returns fibonacci series number.
+
+    Paramaters
+    ----------
+    number : int
+
+    Returns
+    -------
+        int
+
+    Example : fibonacci(10) -> [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    """
+    if number == 0:
+        return []
+    
+    if number == 1:
+        return [0]
+    
+    if number == 2:
+        return [0, 1]
+    
+    fibonacci_list = fibonacci(number-1)
+    fibonacci_list.append(fibonacci_list[-1] + fibonacci_list[-2])
+    
+    return fibonacci_list
+
+print(fibonacci(10))
