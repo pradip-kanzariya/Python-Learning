@@ -10,7 +10,9 @@ with open("new_file.txt", "r") as f:
 
 # Practice Task - 2 | Create a JSON file to store user data and write a program to update it.
 def user_data():
-
+    """
+    Create json file with user information and update information.
+    """
     print("1. : Create user.")
     print("2. : Update user.")
     user_input = input("Choose option '1' or '2' : ").strip()
