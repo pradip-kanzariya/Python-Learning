@@ -10,31 +10,35 @@ with open("new_file.txt", "r") as f:
 
 # Practice Task - 2 | Create a JSON file to store user data and write a program to update it.
 def user_data():
-
+    """
+    Create json file with user information and update information.
+    """
     print("1. : Create user.")
     print("2. : Update user.")
     user_input = input("Choose option '1' or '2' : ").strip()
 
     if user_input == "1":
+        persons_data_list = []
+        user_name = input("Enter Name : ").strip()
+        user_age = input("Enter Age : ").strip()
+        user_hobbies = [hobby.strip() for hobby in input("Enter Hobbies : ").split(",")]
+        if "" in user_hobbies:
+            user_hobbies = None
+        person_data = {"Name": user_name, "Age": user_age, "Hobbies": user_hobbies}
+
         try:
-            with open("users_file.json", "w") as file:
-                persons_data_list = []
-                while True:
-                    user_name = input("Enter Name : ").strip()
-                    user_age = input("Enter Age : ").strip()
-                    user_hobbies = [hobby.strip() for hobby in input("Enter Hobbies : ").split(",")]
-                    if "" in user_hobbies:
-                        user_hobbies = None
-                    person_data = {"Name": user_name, "Age": user_age, "Hobbies": user_hobbies}
-                    persons_data_list.append(person_data)
-                    again_input = input("Type 'yes' is you want to add other user. : ").strip()
-                    if again_input.lower() != "yes":
-                        break              
-                json_person_data = json.dumps(persons_data_list)
-                file.write(json_person_data)                                                                                                                                  
-            print("User Created in json file.")
+            with open("users_file.json", "r") as file:
+                old_data = json.load(file)
+                if old_data:
+                    persons_data_list.extend(old_data)
+                persons_data_list.append(person_data)
         except Exception as e:
             print(f"Error : {e}")
+            persons_data_list.append(person_data)
+
+        with open("users_file.json", "w") as file:
+            json.dump(persons_data_list, file, indent=4)                                                                                                                                 
+            print("User Created in json file.")
 
     elif user_input == "2":
         try:
