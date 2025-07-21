@@ -19,10 +19,8 @@ def my_multiplication_function(Number_1: int|float, Number_2: int|float) -> int|
         3. my_multiplication_function(5, True) -> None
         4. my_multiplication_function("5", 5) -> None
     """
-    if isinstance(Number_1,bool) or isinstance(Number_2, bool):
-        return None
-    
     try:
         return Number_1 * Number_2
     except TypeError:
+        print("Error : enter valid type of value.")
         return None
