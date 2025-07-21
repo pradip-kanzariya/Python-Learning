@@ -5,9 +5,9 @@ def division_calc():
     """
     Division calculator with error handling.
     """
-    number_1 = 10
-    number_2 = 0
     try:
+        number_1 = float(input("Enter 1st number : "))
+        number_2 = float(input("Enter 2nd number : "))
         answer = number_1 / number_2
         print(f"Answer : {answer}")
     except ZeroDivisionError:
