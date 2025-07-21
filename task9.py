@@ -52,3 +52,22 @@ user.withdrawal(acc_number=123, acc_name="abc", money=20)
 
 
 # Practice Task : 2 | Build a simple Shape hierarchy with classes for Circle, Square, etc.
+class Shape:
+    def shape(self):
+        print("Shape class shape function.")
+
+class Circle(Shape):
+    def shape(self):
+        print("Circle is round.")
+
+class Square(Shape):
+    def shape(self):
+        print("Square shape has 4 equal sides.")
+
+class Triangle(Shape):
+    def shape(self):
+        print("Triangle shape has 3 sides.")
+
+shapes = [Shape(), Circle(), Square(), Triangle()]
+for each_shape in shapes:
+    each_shape.shape()
