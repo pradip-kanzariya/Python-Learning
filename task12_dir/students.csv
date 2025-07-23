@@ -1,0 +1,11 @@
+ID,Name,Age,Gender,Math,Science,English,Passed
+1,Alice,14,Female,88,92,85,Yes
+2,Bob,15,Male,76,85,78,Yes
+3,Charlie,14,Male,65,70,72,No
+4,Diana,15,Female,90,95,93,Yes
+5,Ethan,13,Male,58,60,65,No
+6,Fatima,14,Female,84,89,88,Yes
+7,George,15,Male,73,68,70,No
+8,Hannah,13,Female,91,94,90,Yes
+9,Ian,14,Male,67,72,69,No
+10,Jenny,15,Female,89,87,91,Yes
