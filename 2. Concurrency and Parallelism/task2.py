@@ -4,6 +4,7 @@ import time
 
 # Practice Task : 2 | Write a multi-threaded program to simulate a ticket booking system.
 class TicketBookingSystem:
+    """Ticket booking class using threading for parallel threads."""
     def __init__(self, total_tickets):
         self.total_tickets = total_tickets
         self.lock = threading.Lock()

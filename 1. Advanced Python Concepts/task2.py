@@ -1,16 +1,20 @@
 import mysql.connector
+import os
+from dotenv import load_dotenv
 # 1. Advanced Python Concepts
 
 # Practice Task : 2 | Create a custom context manager to manage database connections.
+load_dotenv()
 config = {
-    "host": "localhost",
-    "user": "root",
-    "password": "root",
-    "database": "bookstore",
-    "port": 3306
+    "host": os.getenv("MYSQL_HOST"),
+    "user": os.getenv("MYSQL_USER"),
+    "password": os.getenv("MYSQL_PASSWORD"),
+    "database": os.getenv("MYSQL_DATABASE"),
+    "port": os.getenv("MYSQL_PORT")
 }
 
 class MySqlConnection:
+    """Custom class with context manager for mysql database."""
     def __init__(self, config):
         self.config = config
         self.connection = None

@@ -2,6 +2,7 @@
 
 # Practice Task : 3 | Implement a class Vector that supports addition, subtraction, and string representation using dunder methods.
 class Vector:
+    """Custom addition and subtraction methods for vector class."""
     def __init__(self, v1, v2):
         self.v1 = v1
         self.v2 = v2
@@ -25,6 +26,7 @@ print(v.__sub__())
 
 # Practice Task : 3.1 | Implement a class Vector that supports addition, subtraction, and string representation using dunder methods.
 class Vector:
+    """Custom addition and subtraction methods for vector class."""
     def __init__(self, elements):
         self.elements = elements
 
