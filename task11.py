@@ -46,11 +46,37 @@ print(q.size())
 
 # Practice Task : 2.1 | Create a function to reverse a string using deque.
 def rev_string():
-    """Reverse string function."""
+    """
+    Converts provided string into reverse order.
+
+    Example
+    -------
+        "abc" -> "cba"
+    """
     input_string = input("Enter String : ")
     de_q_str = deque(input_string)
     de_q_str.reverse()
     return "".join(de_q_str)
+
+
+print(rev_string())
+
+# Practice Task : 2.2 | Create a function to reverse a string using deque and without using built in function reverse().
+def rev_string():
+    """
+    Converts provided string into reverse order.
+
+    Example
+    -------
+        "abc" -> "cba"
+    """
+    input_string = input("Enter String : ")
+    de_q_str = deque(input_string)
+    e_str = deque()
+    for x in de_q_str:
+        e_str.appendleft(x)
+    abc = "".join(e_str)
+    return abc
 
 
 print(rev_string())
