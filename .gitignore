@@ -16,3 +16,6 @@ env/
 
 # Ignore logs
 *.log
+
+# Ignore all dotfiles and dotdirectories
+.*
